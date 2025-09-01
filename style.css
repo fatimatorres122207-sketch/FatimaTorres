@@ -31,19 +31,14 @@ header.header{
   margin-bottom: 20px;
 }
 
-.profile-pic{
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  background: conic-gradient(from 120deg at 60% 40%, rgba(255,255,255,0.06), transparent 20%), linear-gradient(120deg, var(--accent1), var(--accent2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 14px;
-  color: #fff;
+.profile-pic {
+  width: 150px;               /* size of the circle */
+  height: 150px;
+  border-radius: 50%;         /* makes it a circle */
+  background: url('filler.png') center/cover no-repeat; /* your image */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional shadow */
 }
+
 
 header h1{
   font-size: 28px;
