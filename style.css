@@ -32,7 +32,8 @@ header.header{
 }
 
 .profile-pic {
-  width: 150px;               /* size of the circle */
+  width: 150px; 
+  align-items: center;
   height: 150px;
   border-radius: 50%;         /* makes it a circle */
   background: url('image1.png') center/cover no-repeat; /* your image */
