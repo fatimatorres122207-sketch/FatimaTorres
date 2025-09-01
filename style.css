@@ -35,7 +35,7 @@ header.header{
   width: 150px;               /* size of the circle */
   height: 150px;
   border-radius: 50%;         /* makes it a circle */
-  background: url('filler.png') center/cover no-repeat; /* your image */
+  background: url('image1.png') center/cover no-repeat; /* your image */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional shadow */
 }
 
