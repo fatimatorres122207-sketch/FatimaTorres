@@ -1,8 +1,8 @@
 :root{
   --bg1: #ffd6e8;
   --bg2: #ffb3d1;
-  --accent1: #ff4da6;
-  --accent2: #ff9ac2;
+  --accent1: #beafb2;
+  --accent2: #f0e0e3;
   --glass: rgba(255,255,255,0.14);
   --glass-2: rgba(255,255,255,0.08);
   --muted: rgba(255,255,255,0.6);
@@ -132,7 +132,7 @@ footer{
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10000px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
+    color: #beafb2;
     font-weight: bold;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -141,7 +141,7 @@ footer{
 
 .cta a:hover {
     background: #ffffff;
-    color: #333333;
+    color: #e0cbd2;
 }
 
 
