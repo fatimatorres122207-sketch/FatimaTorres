@@ -261,13 +261,17 @@ body.dark #themeToggle:hover {
 
 
 /* ---- Footer Social Icons ---- */
+/* ---- Footer Social Icons ---- */
 footer {
   text-align: center;
   padding: 36px 20px;
   border-top: 1px solid var(--border-soft);
   color: var(--text-muted);
-  background: var(--bg-main);
+  background: var(--bg-main);  /* solid deep black */
+  backdrop-filter: none;        /* remove any inherited blur */
+  -webkit-backdrop-filter: none;
 }
+
 
 .footer-icons {
   display: flex;
