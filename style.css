@@ -265,17 +265,13 @@ body.dark #themeToggle:hover {
   margin-bottom: 16px;
 }
 
-.footer-icons a img {
-  width: 36px;
-  height: 36px;
-  transition: transform var(--transition-speed) ease;
-  filter: none; /* remove brightness/blur */
-  image-rendering: crisp-edges; /* prevents anti-alias blur */
+.footer-icons a svg {
+  color: var(--accent); /* cherry-red */
+  transition: transform 0.35s ease;
 }
 
-.footer-icons a:hover img {
+.footer-icons a:hover svg {
   transform: translateY(-4px) scale(1.1);
-  filter: none; /* remove drop-shadow blur */
 }
 
 footer p {
