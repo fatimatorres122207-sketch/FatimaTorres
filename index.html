@@ -36,12 +36,20 @@
 
   <footer>© 2026 Fatima Elizabeth Torres Garcia</footer>
 
-  <script>
-    const toggle = document.getElementById("themeToggle");
+<script>
+  const toggle = document.getElementById("themeToggle");
 
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-    });
-  </script>
+  toggle.addEventListener("click", () => {
+    // Toggle dark mode
+    document.body.classList.toggle("dark");
+    
+    // Redirect to index.html
+    window.location.href = "index.html";
+  });
+</script>
+
+
+
+  
 </body>
 </html>
