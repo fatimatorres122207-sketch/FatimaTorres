@@ -312,7 +312,7 @@ footer {
 }
 
 #themeToggle img.cherry-icon {
-  width: 36px;
-  height: 36px;
+  width: 48px;  /* zoomed in */
+  height: 48px; /* zoomed in */
   object-fit: contain;
 }
