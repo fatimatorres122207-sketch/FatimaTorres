@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Torres Portfolio</title>
+    <style>
+        /* ===============================
+           IVY LEAGUE PORTFOLIO STYLES
+           Black • Elegant • Professional Red / Dark Cherry Theme
+           =============================== */
+
+        :root {
+          --bg-main: #0a0a0a;
+          --bg-card: #111111;
+          --text-main: #f5f5f5;
+          --text-muted: #cfcfcf;
+          --accent: #8b0000;
+          --border-soft: rgba(255,255,255,0.08);
+          --shadow-soft: 0 12px 30px rgba(0,0,0,0.6);
+          --shadow-hover: 0 18px 45px rgba(0,0,0,0.85);
+          --radius-lg: 18px;
+          --radius-md: 12px;
+          --transition-speed: 0.35s;
+        }
+
+        body {
+          background: var(--bg-main);
+          color: var(--text-main);
+          font-family: 'Inter', system-ui, -apple-system, sans-serif;
+          line-height: 1.7;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 24px 56px;
+          background: rgba(0,0,0,0.85);
+          backdrop-filter: blur(12px);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          border-bottom: 1px solid var(--border-soft);
+        }
+
+        nav h1 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; color: var(--text-main); }
+        nav ul { list-style: none; display: flex; gap: 28px; }
+        nav a { text-decoration: none; font-weight: 500; color: var(--text-main); position: relative; padding-bottom: 4px; transition: color var(--transition-speed) ease; }
+        nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background: var(--accent); transition: width var(--transition-speed) ease; }
+        nav a:hover { color: var(--accent); }
+        nav a:hover::after { width: 100%; }
+
+        section { padding: 100px 8vw; max-width: 980px; margin: auto; }
+
+        #motivation {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: var(--text-main);
+            padding: 20px 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            font-weight: bold;
+            font-size: 1.25rem;
+            animation: fadeUp 0.5s ease forwards;
+            z-index: 200;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-out { opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Fatima Torres</h1>
+        <ul>
+            <li><a href="#home" onclick="showMotivation()">Home</a></li>
+            <li><a href="#about" onclick="showMotivation()">About</a></li>
+            <li><a href="#resume" onclick="showMotivation()">Resume</a></li>
+            <li><a href="#gallery" onclick="showMotivation()">Gallery</a></li>
+            <li><a href="#contact" onclick="showMotivation()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home"><h2>Welcome to My Portfolio</h2></section>
+    <section id="about"><h2>About Me</h2></section>
+    <section id="resume"><h2>Resume</h2></section>
+    <section id="gallery"><h2>Gallery</h2></section>
+    <section id="contact"><h2>Contact</h2></section>
+
+    <div id="motivation">¡Échale ganas!</div>
+
+    <script>
+        function showMotivation() {
+            const message = document.getElementById('motivation');
+            message.classList.remove('fade-out');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.classList.add('fade-out');
+                setTimeout(() => { message.style.display = 'none'; }, 500);
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
