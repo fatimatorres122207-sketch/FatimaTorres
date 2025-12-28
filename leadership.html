@@ -35,4 +35,22 @@
   </div>
 </section>
 </body>
+
+
+
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+
+  toggle.addEventListener("click", () => {
+    // Toggle dark mode
+    document.body.classList.toggle("dark");
+    
+    // Redirect to index.html
+    window.location.href = "index.html";
+  });
+</script>
+
+
+  
 </html>
