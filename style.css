@@ -17,6 +17,42 @@
   --radius-md: 14px;
 }
 
+
+
+
+/* ===============================
+   DARK ACADEMIC MODE
+   =============================== */
+
+body.dark {
+  --bg-main: #0f1117;
+  --bg-card: #161a23;
+  --text-main: #f2f2f2;
+  --text-muted: #b3b3b3;
+  --border-soft: rgba(255,255,255,0.08);
+  --shadow-soft: 0 12px 30px rgba(0,0,0,0.6);
+  --shadow-hover: 0 18px 45px rgba(0,0,0,0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---- Base Reset ---- */
 * {
   box-sizing: border-box;
