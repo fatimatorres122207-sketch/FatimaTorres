@@ -21,8 +21,33 @@
     <!-- Theme toggle button -->
     <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
   </nav>
-  
-  
+    <style>
+    /* ===============================
+       MOTIVATION POP-UP STYLES MATCHING PORTFOLIO THEME
+       =============================== */
+    #motivation {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--accent);
+        color: var(--text-main);
+        padding: 20px 30px;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-soft);
+        font-weight: bold;
+        font-size: 1.25rem;
+        animation: fadeUp 0.5s ease forwards;
+        z-index: 200;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-out { opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
+  </style>  
   
   <section class="grid">
   <div class="card">
