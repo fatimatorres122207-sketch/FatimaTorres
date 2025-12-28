@@ -256,3 +256,40 @@ body.dark #themeToggle:hover {
 }
 
 
+
+
+
+
+/* ---- Footer Social Icons ---- */
+footer {
+  text-align: center;
+  padding: 36px 20px;
+  border-top: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  background: var(--bg-main);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-icons a img {
+  width: 36px;
+  height: 36px;
+  transition: transform var(--transition-speed) ease, filter var(--transition-speed) ease;
+  filter: brightness(0.8);
+}
+
+.footer-icons a:hover img {
+  transform: translateY(-4px) scale(1.1);
+  filter: brightness(1) drop-shadow(0 0 6px var(--accent));
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
