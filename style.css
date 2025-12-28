@@ -260,3 +260,37 @@ footer {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+#themeToggle {
+  background: none;
+  border: 1px solid var(--border-soft);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: rgba(0,0,0,0.05);
+  transform: scale(1.05);
+}
+
+body.dark #themeToggle:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+
+
+
+
