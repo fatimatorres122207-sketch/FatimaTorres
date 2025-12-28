@@ -1,65 +1,31 @@
 /* ===============================
    IVY LEAGUE PORTFOLIO STYLES
-   Soft • Editorial • Timeless
+   Black • Elegant • Professional Red / Dark Cherry Theme
    =============================== */
 
 /* ---- CSS Variables ---- */
 :root {
-  --bg-main: #faf9f7;
-  --bg-card: #ffffff;
-  --text-main: #121212;
-  --text-muted: #6b6b6b;
-  --accent: #7a5cff; /* subtle intelligence pop */
-  --border-soft: rgba(0,0,0,0.06);
-  --shadow-soft: 0 12px 30px rgba(0,0,0,0.08);
-  --shadow-hover: 0 18px 45px rgba(0,0,0,0.12);
-  --radius-lg: 20px;
-  --radius-md: 14px;
-}
-
-
-
-
-/* ===============================
-   DARK ACADEMIC MODE
-   =============================== */
-
-body.dark {
-  --bg-main: #0f1117;
-  --bg-card: #161a23;
-  --text-main: #f2f2f2;
-  --text-muted: #b3b3b3;
+  --bg-main: #0a0a0a;             /* deep black background */
+  --bg-card: #111111;             /* slightly lighter card bg */
+  --text-main: #f5f5f5;           /* soft white text */
+  --text-muted: #cfcfcf;          /* muted text */
+  --accent: #8b0000;              /* dark cherry red accent */
   --border-soft: rgba(255,255,255,0.08);
   --shadow-soft: 0 12px 30px rgba(0,0,0,0.6);
-  --shadow-hover: 0 18px 45px rgba(0,0,0,0.8);
+  --shadow-hover: 0 18px 45px rgba(0,0,0,0.85);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --transition-speed: 0.35s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ---- Base Reset ---- */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   background: var(--bg-main);
   color: var(--text-main);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -73,7 +39,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 24px 56px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -85,15 +51,14 @@ nav h1 {
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 28px;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
@@ -102,6 +67,7 @@ nav a {
   color: var(--text-main);
   position: relative;
   padding-bottom: 4px;
+  transition: color var(--transition-speed) ease;
 }
 
 nav a::after {
@@ -112,7 +78,11 @@ nav a::after {
   width: 0%;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transition: width var(--transition-speed) ease;
+}
+
+nav a:hover {
+  color: var(--accent);
 }
 
 nav a:hover::after {
@@ -133,6 +103,7 @@ nav a:hover::after {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.2;
   margin-bottom: 24px;
+  color: var(--text-main);
 }
 
 .hero p {
@@ -149,11 +120,13 @@ nav a:hover::after {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 2px solid rgba(139,0,0,0.3);
 }
 
 .square-img:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
 }
 
 /* ---- Content Sections ---- */
@@ -167,6 +140,7 @@ nav a:hover::after {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   margin-bottom: 28px;
+  color: var(--text-main);
 }
 
 .content p {
@@ -189,7 +163,7 @@ nav a:hover::after {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-soft);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .card:hover {
@@ -201,6 +175,7 @@ nav a:hover::after {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   margin-bottom: 14px;
+  color: var(--accent);
 }
 
 .card p {
@@ -226,6 +201,23 @@ footer {
   border-top: 1px solid var(--border-soft);
 }
 
+/* ---- Theme Toggle ---- */
+#themeToggle {
+  background: none;
+  border: 1px solid var(--border-soft);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#themeToggle:hover {
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.05);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .hero {
@@ -242,11 +234,9 @@ footer {
   }
 }
 
-
 /* ===============================
    FADE-IN ANIMATION
    =============================== */
-
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -259,38 +249,5 @@ footer {
     transform: translateY(0);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-#themeToggle {
-  background: none;
-  border: 1px solid var(--border-soft);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#themeToggle:hover {
-  background: rgba(0,0,0,0.05);
-  transform: scale(1.05);
-}
-
-body.dark #themeToggle:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-
-
 
 
