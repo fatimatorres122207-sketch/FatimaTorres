@@ -1,14 +1,10 @@
-
-<!-- ===== leadership.html ===== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Leadership | Fatima Torres</title>
+  <title>Fatima Torres | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     /* ===============================
        MOTIVATION POP-UP STYLES MATCHING PORTFOLIO THEME
@@ -36,22 +32,24 @@
 
     .fade-out { opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
   </style>
-
-  
+</head>
+<body>
   <nav>
     <h1>Fatima Torres</h1>
-
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="leadership.html">Leadership</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="education.html">Education</a></li>
-    </ul>
+<li><a href="index.html" onclick="showMotivation(event)">Home</a></li>
+<li><a href="leadership.html" onclick="showMotivation(event)">Leadership</a></li>
+<li><a href="projects.html" onclick="showMotivation(event)">Projects</a></li>
+<li><a href="education.html" onclick="showMotivation(event)">Education</a></li>
 
-    <!-- Theme toggle button -->
-    <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
-  </nav>
-  
+</ul>
+<!-- Cherry icon replacing the moon toggle -->
+<button id="themeToggle" aria-label="Toggle dark mode">
+  <img src="cherry.png" alt="Cherry" class="cherry-icon" style="width:48px; height:48px;">
+</button>
+
+</nav>
+
   
   <section class="grid">
 
