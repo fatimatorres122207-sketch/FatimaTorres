@@ -316,3 +316,17 @@ footer {
   height: 48px; /* zoomed in */
   object-fit: contain;
 }
+
+
+
+.hackathon-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hackathon-images img {
+  flex: 1 1 calc(20% - 10px); /* 5 images per row */
+  min-width: 120px; /* ensures they don’t shrink too small on mobile */
+}
