@@ -31,6 +31,62 @@
     }
 
     .fade-out { opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
+
+
+
+
+
+
+
+
+  /* Grid layout for images */
+  .bov-images,
+  .hackathon-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .square-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .card {
+    background-color: var(--bg-card, #111);
+    padding: 20px;
+    border-radius: var(--radius-lg, 12px);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-soft, 0 4px 12px rgba(0,0,0,0.2));
+  }
+
+  section.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </style>
 </head>
 <body>
